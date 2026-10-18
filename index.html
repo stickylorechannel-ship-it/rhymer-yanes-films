@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09090b">
+<meta name="description" content="Watch cinematic AI drama films by Rhymer Yanes Films.">
+<meta property="og:title" content="Rhymer Yanes Films">
+<meta property="og:description" content="Original AI dramas. Big emotions. Stories worth sharing.">
+<meta property="og:type" content="website">
+<title>Rhymer Yanes Films | AI Drama Cinema</title>
+<style>
+:root{--bg:#09090b;--panel:#141418;--muted:#a1a1aa;--text:#f8fafc;--red:#e50914;--line:#29292f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}button,input{font:inherit}
+header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,68px);position:absolute;top:0;left:0;right:0;z-index:5;background:linear-gradient(#000b,transparent)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:.04em}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:var(--red);font-size:17px;box-shadow:0 4px 20px #e5091440}.brand-name{font-size:clamp(14px,2vw,20px)}.nav{display:flex;gap:22px;align-items:center;font-size:13px;color:#eee}.nav a{text-decoration:none}.nav a:hover{color:#fff}
+.hero{min-height:570px;height:min(78vh,760px);display:flex;align-items:flex-end;padding:130px clamp(18px,7vw,100px) 66px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 25%,#7f1d1d88,transparent 35%),radial-gradient(ellipse at 65% 75%,#3f1d2988,transparent 40%),linear-gradient(110deg,#09090b 5%,#181014 50%,#09090b 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,#09090b99 20%,transparent 75%),linear-gradient(90deg,#09090b 0%,#09090b88 42%,transparent 100%)}
+.hero-art{position:absolute;right:8%;top:18%;width:min(38vw,440px);height:66%;border:1px solid #ffffff1c;border-radius:48% 48% 8px 8px;background:linear-gradient(145deg,#d7a07c20,#e5091425 40%,#0f172a88);box-shadow:0 20px 100px #0009;transform:rotate(3deg)}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:linear-gradient(145deg,#f8c7a0,#6b3330 65%,#191919);width:28%;height:38%;top:18%;left:20%;filter:drop-shadow(0 10px 30px #0009)}.hero-art:after{left:53%;top:27%;background:linear-gradient(145deg,#c7a18b,#2e303d 70%,#111)}
+.hero-content{position:relative;z-index:1;max-width:620px}.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#ffb7b7;font-weight:800}.hero h1{font-size:clamp(38px,7vw,76px);line-height:.98;letter-spacing:-.055em;margin:16px 0 18px;max-width:720px}.hero p{font-size:clamp(14px,1.8vw,17px);line-height:1.7;color:#d4d4d8;max-width:510px;margin:0 0 26px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border:0;border-radius:5px;text-decoration:none;font-weight:750;cursor:pointer;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:#fff;color:#111}.btn-secondary{background:#ffffff20;color:white;border:1px solid #ffffff20;backdrop-filter:blur(8px)}
+main{padding:8px clamp(18px,5vw,68px) 56px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:28px 0 18px}.section-head h2{font-size:clamp(21px,3vw,29px);margin:0;letter-spacing:-.03em}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}.search{background:#17171c;border:1px solid #34343c;border-radius:7px;padding:10px 12px;color:white;width:min(230px,45vw);outline:none}.search:focus{border-color:#777}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.film{min-width:0;background:var(--panel);border:1px solid #24242a;border-radius:10px;overflow:hidden;transition:transform .2s,border-color .2s}.film:hover{transform:translateY(-4px);border-color:#555}.thumb{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#3f111c,#1a1a24 55%,#7c2d12)}.thumb:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 25% 30%,#fbbf2440,transparent 25%),radial-gradient(ellipse at 75% 60%,#ef444440,transparent 35%),linear-gradient(0deg,#0009,transparent)}.thumb .monogram{position:relative;font-size:clamp(35px,6vw,64px);font-weight:950;letter-spacing:-.08em;color:#ffffffbd;text-shadow:0 8px 30px #0008}.play{position:absolute;left:14px;bottom:14px;background:#fff;color:#111;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:15px;padding-left:2px}.film-info{padding:15px}.film-info h3{font-size:17px;margin:0 0 8px}.film-info p{font-size:13px;line-height:1.55;color:#b4b4bd;margin:0 0 14px;min-height:40px}.film-actions{display:flex;gap:8px}.small-btn{border:1px solid #3b3b44;background:#202027;color:white;border-radius:5px;padding:8px 10px;font-size:12px;cursor:pointer}.small-btn:hover{background:#303039}.empty{border:1px dashed #393941;border-radius:12px;padding:40px 20px;text-align:center;color:var(--muted);grid-column:1/-1}.empty .icon{font-size:35px;margin-bottom:12px}.empty h3{color:white;margin:0 0 8px}.empty p{max-width:520px;margin:0 auto;line-height:1.6;font-size:14px}
+.about{margin-top:60px;border-top:1px solid var(--line);padding:30px 0 12px;display:flex;gap:30px;justify-content:space-between;align-items:start}.about h2{margin:0 0 10px;font-size:22px}.about p{max-width:650px;color:var(--muted);line-height:1.7;font-size:14px;margin:0}.share-box{flex-shrink:0}.share-box .btn{white-space:nowrap;background:#24242b;color:white;border:1px solid #393941}
+footer{padding:25px clamp(18px,5vw,68px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#777;font-size:12px}
+.modal{position:fixed;inset:0;z-index:20;background:#000e;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-panel{width:min(100%,960px);background:#111116;border:1px solid #393941;border-radius:12px;overflow:hidden;box-shadow:0 30px 100px #000}.modal-top{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;gap:12px}.modal-top h3{margin:0;font-size:16px}.close{background:#28282f;color:white;border:0;border-radius:5px;width:36px;height:36px;cursor:pointer;font-size:20px}.video-wrap{aspect-ratio:16/9;background:#000}.video-wrap iframe{width:100%;height:100%;border:0}.modal-desc{padding:14px 16px 18px;color:#c4c4cc;font-size:14px;line-height:1.6}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:530px}.hero-art{right:-4%;width:48vw;opacity:.7}.about{flex-direction:column}}
+@media(max-width:520px){header{height:62px}.nav{gap:12px;font-size:12px}.hero{height:590px;min-height:0;padding-bottom:42px}.hero-art{top:17%;right:-15%;width:65vw;height:48%;opacity:.48}.grid{grid-template-columns:1fr;gap:14px}.film-info p{min-height:0}.section-head{align-items:start;flex-direction:column}.search{width:100%}.about{margin-top:42px}.hero h1{font-size:47px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#" aria-label="Rhymer Yanes Films home"><span class="brand-mark">RY</span><span class="brand-name">RHYMER YANES FILMS</span></a>
+  <nav class="nav"><a href="#films">Films</a><a href="#about">About</a></nav>
+</header>
+<section class="hero">
+  <div class="hero-art" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Original AI Drama Cinema</div>
+    <h1>Every story<br>leaves a mark.</h1>
+    <p>Emotional stories. Unexpected twists. Cinematic worlds. Discover AI drama films from Rhymer Yanes Films.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#films">▶ &nbsp; Explore Films</a>
+      <button class="btn btn-secondary" id="shareSite">↗ &nbsp; Share Website</button>
+    </div>
+  </div>
+</section>
+<main>
+  <section id="films">
+    <div class="section-head">
+      <div><h2>Featured Films</h2><p>Find a story, press play, and share it with someone.</p></div>
+      <input id="search" class="search" type="search" placeholder="Search films…" aria-label="Search films">
+    </div>
+    <div id="filmGrid" class="grid" aria-live="polite"></div>
+  </section>
+  <section id="about" class="about">
+    <div><h2>Stories beyond the ordinary.</h2><p>Welcome to Rhymer Yanes Films, home of AI-powered drama stories made to entertain, move, and surprise. New films will appear here as they are released. Share a film with friends and family so they can watch it too.</p></div>
+    <div class="share-box"><button class="btn" id="shareAbout">↗ &nbsp; Share Rhymer Yanes Films</button></div>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> Rhymer Yanes Films</span><span>AI-generated stories • Made to be shared</span></footer>
+<div class="modal" id="watchModal" role="dialog" aria-modal="true" aria-label="Watch film">
+  <div class="modal-panel">
+    <div class="modal-top"><h3 id="modalTitle">Now Playing</h3><button class="close" id="closeModal" aria-label="Close video">×</button></div>
+    <div class="video-wrap" id="videoWrap"></div>
+    <div class="modal-desc" id="modalDescription"></div>
+  </div>
+</div>
+<script src="videos.js"></script>
+<script>
+const grid=document.getElementById('filmGrid'),search=document.getElementById('search'),modal=document.getElementById('watchModal');
+const films=Array.isArray(window.RY_FILMS)?window.RY_FILMS:[];
+function ytId(url){if(!url)return '';try{const u=new URL(url);if(u.hostname.includes('youtu.be'))return u.pathname.slice(1).split('/')[0];if(u.searchParams.get('v'))return u.searchParams.get('v');const m=u.pathname.match(/\/(?:embed|shorts)\/([^/?]+)/);return m?m[1]:''}catch(e){return ''}}
+function videoUrl(id){return 'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0'}
+function shareUrl(film){const u=new URL(location.href);u.search='';u.hash='';u.searchParams.set('film',film.id);return u.toString()}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const items=films.filter(f=>(f.title+' '+(f.description||'')+' '+(f.genre||'')).toLowerCase().includes(q));
+ if(!items.length){grid.innerHTML=`<div class="empty"><div class="icon">🎬</div><h3>${films.length?'No films found':'Your movie collection starts here.'}</h3><p>${films.length?'Try another title or keyword.':'Your website is ready. Add your YouTube films in videos.js, then publish the update. Each film will have its own watch and share link.'}</p></div>`;return}
+ grid.innerHTML=items.map(f=>`<article class="film"><button class="thumb" style="width:100%;border:0;cursor:pointer" data-watch="${esc(f.id)}" aria-label="Watch ${esc(f.title)}"><span class="monogram">${esc(f.monogram||'RY')}</span><span class="play">▶</span></button><div class="film-info"><h3>${esc(f.title)}</h3><p>${esc(f.description||'An AI drama film from Rhymer Yanes Films.')}</p><div class="film-actions"><button class="small-btn" data-watch="${esc(f.id)}">▶ Watch film</button><button class="small-btn" data-share="${esc(f.id)}">↗ Share link</button></div></div></article>`).join('');
+}
+function openFilm(f){
+ const id=ytId(f.youtube);
+ if(!id){alert('Please add a valid YouTube video link for this film in videos.js.');return}
+ document.getElementById('modalTitle').textContent=f.title;
+ document.getElementById('modalDescription').textContent=f.description||'';
+ document.getElementById('videoWrap').innerHTML=`<iframe src="${videoUrl(id)}" title="${esc(f.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+ modal.classList.add('open');document.body.style.overflow='hidden';
+ const u=new URL(location.href);u.search='';u.searchParams.set('film',f.id);history.replaceState({},'',u);
+}
+function closeFilm(){modal.classList.remove('open');document.getElementById('videoWrap').innerHTML='';document.body.style.overflow='';const u=new URL(location.href);u.search='';history.replaceState({},'',u)}
+async function share(title,url){if(navigator.share){try{await navigator.share({title,text:'Watch '+title+' from Rhymer Yanes Films',url});return}catch(e){if(e.name==='AbortError')return}}try{await navigator.clipboard.writeText(url);alert('Link copied. Paste it into Facebook or Messenger.')}catch(e){prompt('Copy this link:',url)}}
+document.addEventListener('click',e=>{const w=e.target.closest('[data-watch]');const s=e.target.closest('[data-share]');if(w){const f=films.find(x=>x.id===w.dataset.watch);if(f)openFilm(f)}if(s){const f=films.find(x=>x.id===s.dataset.share);if(f)share(f.title,shareUrl(f))}});
+document.getElementById('shareSite').addEventListener('click',()=>share('Rhymer Yanes Films',location.href.split('?')[0]));
+document.getElementById('shareAbout').addEventListener('click',()=>share('Rhymer Yanes Films',location.href.split('?')[0]));
+document.getElementById('closeModal').addEventListener('click',closeFilm);
+modal.addEventListener('click',e=>{if(e.target===modal)closeFilm()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFilm()});
+search.addEventListener('input',render);document.getElementById('year').textContent=new Date().getFullYear();render();
+const requested=new URL(location.href).searchParams.get('film');if(requested){const f=films.find(x=>x.id===requested);if(f)openFilm(f)}
+</script>
+</body>
+</html>
